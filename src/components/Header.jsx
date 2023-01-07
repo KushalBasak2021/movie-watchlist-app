@@ -17,7 +17,9 @@ const Header = () => {
           </li>
         </ul>
         <button className="btn add-btn">
-          <Link to="add">+ ADD</Link>
+          <Link to="add">
+            + <span>ADD</span>
+          </Link>
         </button>
       </div>
     </div>

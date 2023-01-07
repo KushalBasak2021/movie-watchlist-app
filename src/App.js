@@ -4,8 +4,10 @@ import WatchList from "./components/WatchList";
 import Watched from "./components/Watched";
 import Add from "./components/Add";
 import { AppProvider } from "./context/GlobalContext";
+import { useState } from "react";
 
 function App() {
+  const [query, setQuery] = useState("");
   return (
     <AppProvider>
       <Router>
@@ -14,7 +16,10 @@ function App() {
           <Routes>
             <Route path="/" element={<WatchList />} />
             <Route path="watched" element={<Watched />} />
-            <Route path="add" element={<Add />} />
+            <Route
+              path="add"
+              element={<Add query={query} setQuery={setQuery} />}
+            />
           </Routes>
         </div>
       </Router>

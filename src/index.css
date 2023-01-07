@@ -31,6 +31,7 @@ body {
 }
 
 .movie-watchlist-container {
+  width: 90vw;
   max-width: 960px;
   margin: auto;
 }
@@ -201,4 +202,52 @@ body {
 
 .moviecard:hover .movie-control {
   visibility: visible;
+}
+
+@media (max-width: 850px) {
+  .movie-watchlist-container {
+    width: 100%;
+  }
+
+  .watch-list .movie-control {
+    visibility: visible;
+  }
+
+  .watched .movie-control {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 500px) {
+  .movie-watchlist-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .btn a span {
+    display: none;
+  }
+
+  .add {
+    padding: 20px 0;
+    padding-left: 30px;
+    align-items: flex-start;
+  }
+
+  .add input,
+  .movie-container-list {
+    width: 90%;
+  }
+
+  .movie-container img {
+    height: 12rem;
+  }
 }

@@ -8,7 +8,9 @@ const Watched = () => {
     <div className="watched">
       <div className="top">
         <h2>Watched Movie</h2>
-        <div className="btn movie-count">{watched.length} Movies</div>
+        <div className="btn movie-count">
+          {watched.length} {watched.length > 1 ? "Movies" : "Movie"}
+        </div>
       </div>
       <div className="movie-watched-list">
         {watched.map((movie) => (
